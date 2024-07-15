@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle para ti</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #3b0630; /* Color morado */
+      color: rgb(59, 0, 59); /* Color del texto */
+      font-family: Arial, sans-serif; /* Fuente del texto */
+      padding: 30px 10px;
+      margin: 0;
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .container {
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    }
+    .tenor-gif-embed {
+      margin: 20px auto;
+      max-width: 100%;
+    }
+    .button-container {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #4CAF50; /* Color verde */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+      text-indent: 0; /* Mostrar el texto */
+      font-size: 16px; /* Tamaño del texto */
+      font-weight: bold; /* Negrita */
+    }
+    .button-no {
+      background-color: #F44336; /* Color rojo */
+    }
+    .button-no:hover {
+      background-color: #e53935; /* Color rojo más oscuro al pasar el mouse */
+    }
+    /* Estilos para la ventana emergente */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 90%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .flower-img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hola!! Perdon por tan poco, pero en un futuro te daré más detalles bonitos</h1>
+    <p> No soy bueno diciendo o escribiendo palabras dulces, pero realmente si me dio esta oportunidad me esforzare para tenerte a ti, una guapa y linda muchacha muy feliz </p>
+    <p> Mire al final de la imagen.</p>
+    
+    <!-- GIF de Tenor -->
+    <div class="tenor-gif-embed" data-postid="18264149484891205516" data-share-method="host" data-aspect-ratio="1.0123" data-width="100%">
+      <a href="https://tenor.com/view/peach-goma-fan-mouth-summer-gif-18264149484891205516">Peach Goma Fan Mouth Summer Sticker</a> from <a href="https://tenor.com/search/peach+goma-stickers">Peach Goma Stickers</a>
+    </div>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <p> ¿Le gusto el detalle?</p>
+    <!-- Botones de Si y No -->
+    <div class="button-container">
+      <button class="button" id="yesButton">Sí</button>
+      <button class="button button-no" id="noButton">No</button>
+    </div>
+
+    <!-- Ventana modal para "Sí" -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Que linda, , gracias realmente no la decepcionare y la cuidare mucho</h2>
+        <p>Abrazo de distancia :</p>
+        <div class="tenor-gif-embed" data-postid="15711063" data-share-method="host" data-aspect-ratio="0.95" data-width="100%"><a href="https://tenor.com/view/abrazo-un-te-mando-renatosx-gif-15711063">Abrazo Un GIF</a>from <a href="https://tenor.com/search/abrazo-gifs">Abrazo GIFs</a></div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      </div>
+    </div>
+
+    <!-- Ventana modal para "No" -->
+    <div id="myModalNo" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Negativo, aqui no és donde debe de dar clik </h2>
+        
+        <div class="tenor-gif-embed" data-postid="17865991" data-share-method="host" data-aspect-ratio="0.546875" data-width="100%"><a href="https://tenor.com/view/boring-cat-burning-tired-why-gif-17865991">Boring Cat GIF</a> from <a href="https://tenor.com/search/boring-gifs">Boring GIFs</a></div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      </div>
+    </div>
+
+    <script>
+      // Función para mostrar la ventana modal y la flor al hacer clic en "Sí"
+      document.getElementById('yesButton').addEventListener('click', function() {
+        var modal = document.getElementById('myModal');
+        modal.style.display = "block";
+      });
+
+      // Función para cerrar la ventana modal al hacer clic en la X (para "Sí")
+      document.querySelector('#myModal .close').addEventListener('click', function() {
+        var modal = document.getElementById('myModal');
+        modal.style.display = "none";
+      });
+
+      // Función para mostrar la ventana modal y el GIF al hacer clic en "No"
+      document.getElementById('noButton').addEventListener('click', function() {
+        var modalNo = document.getElementById('myModalNo');
+        modalNo.style.display = "block";
+      });
+
+      // Función para cerrar la ventana modal al hacer clic en la X (para "No")
+      document.querySelector('#myModalNo .close').addEventListener('click', function() {
+        var modalNo = document.getElementById('myModalNo');
+        modalNo.style.display = "none";
+      });
+    </script>
+  </div>
+</body>
+</html>
